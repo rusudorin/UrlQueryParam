@@ -26,6 +26,19 @@ public class UrlQueryParam {
         this.queryParams = queryParams;
     }
 
+    public void add(QueryParam queryParam) {
+        queryParams.add(queryParam);
+    }
+
+    public void remove(String key) {
+        for (QueryParam queryParam : queryParams) {
+            if (queryParam.getKey().equals(key)) {
+                queryParams.remove(queryParam);
+                break;
+            }
+        }
+    }
+
     public String getEntireUrl() {
         String returnUrl = url.getUrl() + "?";
 

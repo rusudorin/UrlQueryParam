@@ -12,4 +12,12 @@ public class QueryParam {
     public String getQueryParam() {
         return key + "=" + value;
     }
+
+    public String getKey() {
+        return key;
+    }
+
+    public String getValue() {
+        return value;
+    }
 }
